@@ -1,5 +1,8 @@
-
 spring:
-  mongo:
+  data:
+    mongodb:
+      database: PRODUCT
+  mongodb:
     data:
-      uri: mongodb://localhost:27017/PRODUCT
+      uri: mongodb://localhost:27017/product
+      collection: product
