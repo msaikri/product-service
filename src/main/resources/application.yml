@@ -6,3 +6,6 @@ spring:
     data:
       uri: mongodb://localhost:27017/product
       collection: product
+server:
+  port:
+    8080
