@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: product-service
   data:
     mongodb:
       database: PRODUCT
@@ -7,5 +9,17 @@ spring:
       uri: mongodb://localhost:27017/product
       collection: product
 server:
-  port:
-    8080
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    #register eureka as application
+    register-with-eureka: true
+    #fetch all thing, we can get applications here
+    fetch-registry: true
+    #also you can specify the instance renewal time.
+  instance:
+    prefer-ip-address: true
+    #instanceId: ${spring.application.name}:${random.value}
